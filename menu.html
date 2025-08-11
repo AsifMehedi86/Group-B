@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Dine | Menu</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="menu-page">
+  <header>
+    <div class="container">
+      <h1>🍽️ The Dine</h1>
+      <nav>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+          <a href="checkout.html">Checkout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="menu">
+    <section class="category-nav">
+      <button data-cat="bd">Bangladeshi</button>
+      <button data-cat="cn">Chinese</button>
+      <button data-cat="in">Indian</button>
+      <button data-cat="np">Nepali</button>
+      <button data-cat="pk">Pakistani</button>
+    </section>
+<!-- Bangladeshi -->
+<section class="dishes" id="bd">
+  <h2>Bangladeshi</h2>
+  <ul>
+    <li>Biryani - £2.50 <button onclick="addToBasket('Biryani', 2.50)">Add to Basket</button></li>
+    <li>Hilsha Fish Curry - £4.00 <button onclick="addToBasket('Hilsha Fish Curry', 4.00)">Add to Basket</button></li>
+    <li>Bhuna Khichuri - £1.80 <button onclick="addToBasket('Bhuna Khichuri', 1.80)">Add to Basket</button></li>
+    <li>Panta Ilish - £3.00 <button onclick="addToBasket('Panta Ilish', 3.00)">Add to Basket</button></li>
+    <li>Shutki Bhuna - £3.50 <button onclick="addToBasket('Shutki Bhuna', 3.50)">Add to Basket</button></li>
+    <li>Chingri Malai Curry - £4.50 <button onclick="addToBasket('Chingri Malai Curry', 4.50)">Add to Basket</button></li>
+    <li>Kacchi Biryani - £2.70 <button onclick="addToBasket('Kacchi Biryani', 2.70)">Add to Basket</button></li>
+    <li>Begun Bharta - £1.20 <button onclick="addToBasket('Begun Bharta', 1.20)">Add to Basket</button></li>
+    <li>Morog Polao - £2.20 <button onclick="addToBasket('Morog Polao', 2.20)">Add to Basket</button></li>
+    <li>Fuchka - £1.00 <button onclick="addToBasket('Fuchka', 1.00)">Add to Basket</button></li>
+    <li>Roshogolla - £0.90 <button onclick="addToBasket('Roshogolla', 0.90)">Add to Basket</button></li>
+    <li>Patishapta - £1.50 <button onclick="addToBasket('Patishapta', 1.50)">Add to Basket</button></li>
+    <li>Shorshe Ilish - £4.20 <button onclick="addToBasket('Shorshe Ilish', 4.20)">Add to Basket</button></li>
+    <li>Lentil Soup - £1.30 <button onclick="addToBasket('Lentil Soup', 1.30)">Add to Basket</button></li>
+  </ul>
+</section>
+
+<!-- Chinese -->
+<section class="dishes" id="cn" hidden>
+  <h2>Chinese</h2>
+  <ul>
+    <li>Sweet and Sour Chicken - £3.50 <button onclick="addToBasket('Sweet and Sour Chicken', 3.50)">Add to Basket</button></li>
+    <li>Kung Pao Chicken - £4.00 <button onclick="addToBasket('Kung Pao Chicken', 4.00)">Add to Basket</button></li>
+    <li>Spring Rolls - £2.00 <button onclick="addToBasket('Spring Rolls', 2.00)">Add to Basket</button></li>
+    <li>Fried Rice - £2.50 <button onclick="addToBasket('Fried Rice', 2.50)">Add to Basket</button></li>
+    <li>Chow Mein - £3.00 <button onclick="addToBasket('Chow Mein', 3.00)">Add to Basket</button></li>
+    <li>Peking Duck - £8.00 <button onclick="addToBasket('Peking Duck', 8.00)">Add to Basket</button></li>
+    <li>Dim Sum - £5.00 <button onclick="addToBasket('Dim Sum', 5.00)">Add to Basket</button></li>
+    <li>Hot and Sour Soup - £2.20 <button onclick="addToBasket('Hot and Sour Soup', 2.20)">Add to Basket</button></li>
+    <li>Mapo Tofu - £3.80 <button onclick="addToBasket('Mapo Tofu', 3.80)">Add to Basket</button></li>
+    <li>Egg Fried Rice - £2.30 <button onclick="addToBasket('Egg Fried Rice', 2.30)">Add to Basket</button></li>
+    <li>Beef with Broccoli - £4.50 <button onclick="addToBasket('Beef with Broccoli', 4.50)">Add to Basket</button></li>
+    <li>General Tso's Chicken - £4.00 <button onclick="addToBasket('General Tso\'s Chicken', 4.00)">Add to Basket</button></li>
+    <li>Spring Onion Pancakes - £2.50 <button onclick="addToBasket('Spring Onion Pancakes', 2.50)">Add to Basket</button></li>
+    <li>Wonton Soup - £2.80 <button onclick="addToBasket('Wonton Soup', 2.80)">Add to Basket</button></li>
+    <li>Chinese BBQ - £4.20 <button onclick="addToBasket('Chinese BBQ', 4.20)">Add to Basket</button></li>
+  </ul>
+</section>
+
+<!-- Indian -->
+<section class="dishes" id="in" hidden>
+  <h2>Indian</h2>
+  <ul>
+    <li>Butter Chicken - £4.50 <button onclick="addToBasket('Butter Chicken', 4.50)">Add to Basket</button></li>
+    <li>Paneer Tikka - £3.80 <button onclick="addToBasket('Paneer Tikka', 3.80)">Add to Basket</button></li>
+    <li>Biryani - £4.20 <button onclick="addToBasket('Indian Biryani', 4.20)">Add to Basket</button></li>
+    <li>Samosa - £1.50 <button onclick="addToBasket('Samosa', 1.50)">Add to Basket</button></li>
+    <li>Chole Bhature - £3.00 <button onclick="addToBasket('Chole Bhature', 3.00)">Add to Basket</button></li>
+    <li>Tandoori Chicken - £4.70 <button onclick="addToBasket('Tandoori Chicken', 4.70)">Add to Basket</button></li>
+    <li>Dal Makhani - £3.20 <button onclick="addToBasket('Dal Makhani', 3.20)">Add to Basket</button></li>
+    <li>Masala Dosa - £3.50 <button onclick="addToBasket('Masala Dosa', 3.50)">Add to Basket</button></li>
+    <li>Aloo Gobi - £2.80 <button onclick="addToBasket('Aloo Gobi', 2.80)">Add to Basket</button></li>
+    <li>Naan Bread - £1.50 <button onclick="addToBasket('Naan Bread', 1.50)">Add to Basket</button></li>
+    <li>Rogan Josh - £4.60 <button onclick="addToBasket('Rogan Josh', 4.60)">Add to Basket</button></li>
+    <li>Pani Puri - £2.00 <button onclick="addToBasket('Pani Puri', 2.00)">Add to Basket</button></li>
+    <li>Palak Paneer - £3.50 <button onclick="addToBasket('Palak Paneer', 3.50)">Add to Basket</button></li>
+    <li>Gulab Jamun - £1.80 <button onclick="addToBasket('Gulab Jamun', 1.80)">Add to Basket</button></li>
+    <li>Chicken Korma - £4.40 <button onclick="addToBasket('Chicken Korma', 4.40)">Add to Basket</button></li>
+  </ul>
+</section>
+
+
+<!-- Nepali -->
+<section class="dishes" id="np" hidden>
+  <h2>Nepali</h2>
+  <ul>
+    <li>Momo - £3.00 <button onclick="addToBasket('Momo', 3.00)">Add to Basket</button></li>
+    <li>Dal Bhat - £3.50 <button onclick="addToBasket('Dal Bhat', 3.50)">Add to Basket</button></li>
+    <li>Gundruk - £2.50 <button onclick="addToBasket('Gundruk', 2.50)">Add to Basket</button></li>
+    <li>Sel Roti - £1.80 <button onclick="addToBasket('Sel Roti', 1.80)">Add to Basket</button></li>
+    <li>Thukpa - £3.20 <button onclick="addToBasket('Thukpa', 3.20)">Add to Basket</button></li>
+    <li>Chatamari - £2.70 <button onclick="addToBasket('Chatamari', 2.70)">Add to Basket</button></li>
+    <li>Kwati - £3.00 <button onclick="addToBasket('Kwati', 3.00)">Add to Basket</button></li>
+    <li>Alu Tama - £2.90 <button onclick="addToBasket('Alu Tama', 2.90)">Add to Basket</button></li>
+    <li>Yomari - £2.50 <button onclick="addToBasket('Yomari', 2.50)">Add to Basket</button></li>
+    <li>Sukuti - £3.80 <button onclick="addToBasket('Sukuti', 3.80)">Add to Basket</button></li>
+    <li>Selroti with Aloo Tama - £3.50 <button onclick="addToBasket('Selroti with Aloo Tama', 3.50)">Add to Basket</button></li>
+    <li>Juju Dhau - £2.20 <button onclick="addToBasket('Juju Dhau', 2.20)">Add to Basket</button></li>
+    <li>Bhuteko Chana - £1.50 <button onclick="addToBasket('Bhuteko Chana', 1.50)">Add to Basket</button></li>
+    <li>Kwati Soup - £3.10 <button onclick="addToBasket('Kwati Soup', 3.10)">Add to Basket</button></li>
+    <li>Chicken Sekuwa - £4.00 <button onclick="addToBasket('Chicken Sekuwa', 4.00)">Add to Basket</button></li>
+  </ul>
+</section>
+
+<!-- Pakistani -->
+<section class="dishes" id="pk" hidden>
+  <h2>Pakistani</h2>
+  <ul>
+    <li>Biryani - £4.00 <button onclick="addToBasket('Pakistani Biryani', 4.00)">Add to Basket</button></li>
+    <li>Seekh Kebabs - £3.50 <button onclick="addToBasket('Seekh Kebabs', 3.50)">Add to Basket</button></li>
+    <li>Chicken Karahi - £4.50 <button onclick="addToBasket('Chicken Karahi', 4.50)">Add to Basket</button></li>
+    <li>Nihari - £5.00 <button onclick="addToBasket('Nihari', 5.00)">Add to Basket</button></li>
+    <li>Chapli Kebab - £3.80 <button onclick="addToBasket('Chapli Kebab', 3.80)">Add to Basket</button></li>
+    <li>Haleem - £4.20 <button onclick="addToBasket('Haleem', 4.20)">Add to Basket</button></li>
+    <li>Samosa - £1.50 <button onclick="addToBasket('Pakistani Samosa', 1.50)">Add to Basket</button></li>
+    <li>Roghani Naan - £1.80 <button onclick="addToBasket('Roghani Naan', 1.80)">Add to Basket</button></li>
+    <li>Aloo Keema - £3.00 <button onclick="addToBasket('Aloo Keema', 3.00)">Add to Basket</button></li>
+    <li>Pakora - £2.00 <button onclick="addToBasket('Pakora', 2.00)">Add to Basket</button></li>
+    <li>Butter Chicken - £4.50 <button onclick="addToBasket('Pakistani Butter Chicken', 4.50)">Add to Basket</button></li>
+    <li>Kofta Curry - £3.80 <button onclick="addToBasket('Kofta Curry', 3.80)">Add to Basket</button></li>
+    <li>Gulab Jamun - £1.70 <button onclick="addToBasket('Pakistani Gulab Jamun', 1.70)">Add to Basket</button></li>
+    <li>Chicken Tikka - £4.00 <button onclick="addToBasket('Chicken Tikka', 4.00)">Add to Basket</button></li>
+    <li>Saag - £3.20 <button onclick="addToBasket('Saag', 3.20)">Add to Basket</button></li>
+  </ul>
+</section>
+
+<!-- Basket -->
+<section id="basket">
+  <h3>🛒 Your Basket</h3>
+  <ul id="basketItems"></ul>
+  <p><strong>Total items:</strong> <span id="totalItems">0</span></p>
+  <p><strong>Total price:</strong> £<span id="totalPrice">0.00</span></p>
+  <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+</section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

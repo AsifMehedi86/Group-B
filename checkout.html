@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Dine | Checkout</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="checkout-page">
+  <header>
+    <div class="container">
+      <h1>🍽️ The Dine</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="checkout.html" class="active">Checkout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="checkout-container">
+    <h2>🧾 Checkout Summary</h2>
+    <ul id="checkoutItems"></ul>
+    <p><strong>Total Price:</strong> £<span id="checkoutTotal">0.00</span></p>
+
+    <div class="checkout-actions">
+      <a id="whatsappOrder" class="cta-button" href="#">💬 Text Your Order on WhatsApp</a>
+    </div>
+  </main>
+
+  <script>
+    // Load basket from localStorage
+    const items = JSON.parse(localStorage.getItem("basket")) || [];
+    const list = document.getElementById("checkoutItems");
+    const totalEl = document.getElementById("checkoutTotal");
+    let total = 0;
+
+    // Display items & calculate total
+    items.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} - £${item.price.toFixed(2)}`;
+      total += item.price;
+      list.appendChild(li);
+    });
+
+    totalEl.textContent = total.toFixed(2);
+
+    // WhatsApp Order Button
+    document.getElementById("whatsappOrder").addEventListener("click", () => {
+      const orderDetails = items.map(i => `${i.name} - £${i.price.toFixed(2)}`).join("%0A");
+      const whatsappNumber = "447523435912"; // UK number without + sign
+      const message = `Hello, I would like to order:%0A${orderDetails}%0A%0ATotal: £${total.toFixed(2)}`;
+      window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
+    });
+  </script>
+</body>
+</html>
+
+

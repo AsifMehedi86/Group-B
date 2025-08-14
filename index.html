@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Dine | Home</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="favicon.icon" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Dine - Welcome</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="home-page">
   <header id="top">
@@ -27,7 +26,7 @@
   <section class="hero">
     <div class="hero-content">
       <h2>Delicious Moments Await</h2>
-      <p>Welcome to The dine's elegance and unforgettable dining.</p>
+      <p>Welcome to The Dine's elegance and unforgettable dining.</p>
       <a href="menu.html" class="cta-button">View Our Menu</a>
     </div>
   </section>
@@ -35,22 +34,96 @@
   <section class="specials">
     <h3>🌟 The Dine Specials</h3>
     <ul>
-      <li>🔥Shutki Bhuna</li>
-      <li>🍨Chicken Shashlick</li>
+      <li>🔥 Shutki Bhuna</li>
+      <li>🍨 Chicken Shashlick</li>
       <li>🍨 Vanilla Bean Crème Brûlée</li>
     </ul>
   </section>
-  <style>
-  .specials ul li {
-    color: black;
-  }
-</style>
 
-  <footer>
-    <p>&copy; 2025 The Dine. All rights reserved.</p>
-    <p id="timeDisplay"></p>
-  </footer>
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner">
+    <p>🍪 We use cookies to improve your dining experience at <strong>The Dine</strong>. By continuing, you agree to our <a href="#" style="color: #ffd700;">Cookie Policy</a>.</p>
+    <button id="accept-cookies">Accept</button>
+  </div>
+
+  <style>
+    .specials ul li {
+      color: black;
+    }
+
+    /* Cookie banner styles */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.9);
+      color: white;
+      padding: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      font-size: 14px;
+    }
+
+    #cookie-banner p {
+      margin: 0;
+      flex: 1;
+    }
+
+    #cookie-banner button {
+      background: #ff7f50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    #cookie-banner button:hover {
+      background: #e96b3c;
+    }
+  </style>
+
+  
 
   <script src="js/script.js"></script>
+
+  <!-- Cookie Script -->
+  <script>
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      const nameEQ = name + "=";
+      const ca = document.cookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    if (getCookie("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      setCookie("cookiesAccepted", "true", 365);
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
 </body>
 </html>

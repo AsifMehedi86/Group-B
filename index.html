@@ -39,13 +39,6 @@
       <li>🍨 Vanilla Bean Crème Brûlée</li>
     </ul>
   </section>
-
-  <!-- Cookie Consent Banner -->
-  <div id="cookie-banner">
-    <p>🍪 We use cookies to improve your dining experience at <strong>The Dine</strong>. By continuing, you agree to our <a href="#" style="color: #ffd700;">Cookie Policy</a>.</p>
-    <button id="accept-cookies">Accept</button>
-  </div>
-
   <style>
     .specials ul li {
       color: black;
@@ -88,42 +81,6 @@
       background: #e96b3c;
     }
   </style>
-
-  
-
-  <script src="js/script.js"></script>
-
-  <!-- Cookie Script -->
-  <script>
-    function setCookie(name, value, days) {
-      let expires = "";
-      if (days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-      }
-      document.cookie = name + "=" + (value || "") + expires + "; path=/";
-    }
-
-    function getCookie(name) {
-      const nameEQ = name + "=";
-      const ca = document.cookie.split(';');
-      for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-      }
-      return null;
-    }
-
-    if (getCookie("cookiesAccepted")) {
-      document.getElementById("cookie-banner").style.display = "none";
-    }
-
-    document.getElementById("accept-cookies").addEventListener("click", function () {
-      setCookie("cookiesAccepted", "true", 365);
-      document.getElementById("cookie-banner").style.display = "none";
-    });
   </script>
 </body>
 </html>

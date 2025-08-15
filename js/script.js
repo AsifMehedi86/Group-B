@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   // 🌙 Load and toggle theme
   const toggleBtn = document.getElementById("toggleTheme");
@@ -144,8 +145,6 @@ function addToBasket(name, price) {
 // Initialize on page load
 updateBasketDisplay();
 
-// Optional: trigger the first category on page load to show something
-if (buttons.length) buttons[0].click();
 
-// Export the function if needed for inline onclick
-window.addToBasket = addToBasket;
+
+

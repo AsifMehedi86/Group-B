@@ -789,7 +789,7 @@ function updateBasketUI() {
 
 // Run on page load
 updateBasketUI();
-/* Responsive Design */
+ 
 @media (max-width: 768px) {
   .category-nav {
     flex-direction: column;

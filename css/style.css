@@ -789,5 +789,23 @@ function updateBasketUI() {
 
 // Run on page load
 updateBasketUI();
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .checkout-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
  
 

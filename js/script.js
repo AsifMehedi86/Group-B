@@ -65,9 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// script.js
-
-// Show the selected category and hide others
 const buttons = document.querySelectorAll(".category-nav button");
 const dishes = document.querySelectorAll(".dishes");
 
@@ -79,7 +76,7 @@ buttons.forEach(button => {
       section.hidden = section.id !== cat;
     });
 
-    // Optional: visually mark the active button
+    
     buttons.forEach(btn => btn.classList.remove("active"));
     button.classList.add("active");
   });

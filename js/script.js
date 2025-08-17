@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 1000);
 
-  // 🍜 Dish category switching
+  //  Dish category switching
   const buttons = document.querySelectorAll(".category-nav button");
   const sections = document.querySelectorAll(".dishes");
 
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 🖼️ Lightbox popup
+ 
   const popupImages = document.querySelectorAll(".popup-img");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
@@ -82,7 +82,7 @@ buttons.forEach(button => {
   });
 });
 
-// Basket handling
+
 function saveBasket(basket) {
   localStorage.setItem("basket", JSON.stringify(basket));
 }
@@ -105,7 +105,7 @@ function updateBasketDisplay() {
     const li = document.createElement("li");
     li.textContent = `${item.name} - £${item.price.toFixed(2)}`;
 
-    // Create Remove button
+    
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "Remove";
     removeBtn.style.marginLeft = "10px";
@@ -123,15 +123,14 @@ function updateBasketDisplay() {
   totalPriceEl.textContent = total.toFixed(2);
 }
 
-// Remove item from basket by index
 function removeFromBasket(index) {
   const basket = loadBasket();
-  basket.splice(index, 1); // Remove one item at index
+  basket.splice(index, 1);
   saveBasket(basket);
   updateBasketDisplay();
 }
 
-// Add item to basket function called from HTML inline onclick
+
 function addToBasket(name, price) {
   const basket = loadBasket();
   basket.push({ name, price });
@@ -139,7 +138,7 @@ function addToBasket(name, price) {
   updateBasketDisplay();
 }
 
-// Initialize on page load
+
 updateBasketDisplay();
 
 

@@ -722,12 +722,12 @@ body.dark-theme .contact-form button {
 }
 
 .checkout-container {
-  background-color: rgba(0, 0, 0, 0.6); /* dark transparent background */
+  background-color: rgba(0, 0, 0, 0.6); 
   padding: 30px;
   border-radius: 12px;
   max-width: 800px;
   margin: 40px auto;
-  color: #ffd700; /* gold text */
+  color: #ffd700; 
 }
 
 .checkout-total {
@@ -792,79 +792,3 @@ function updateBasketUI() {
 updateBasketUI();
  
 
-.hamburger {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: gold;
-}
-
-nav.nav-menu a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: rgb(255, 205, 4);
-}
-
-@media (max-width: 768px) {
-  
-  .hamburger {
-    display: block;
-  }
-
-  /* Hide nav menu by default on mobile */
-  nav.nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #222; /* dark background */
-    position: absolute;
-    top: 60px; /* below header */
-    right: 0;
-    width: 200px;
-    border-radius: 4px;
-    padding: 10px;
-  }
-
-  nav.nav-menu a {
-    margin: 10px 0;
-    display: block;
-    color: gold;
-  }
-
-  /* Show nav when active */
-  nav.nav-menu.active {
-    display: flex;
-  }
-}
-
-
-.hamburger {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: gold;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-  nav.nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #222;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 180px;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1000;
-  }
-  nav.nav-menu.active {
-    display: flex;
-  }
-}

@@ -127,7 +127,6 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Dark Mode */
 body.dark {
   --background: #1a1a1a;
   --text: #eee;
@@ -159,7 +158,7 @@ body.dark {
   animation: fadeIn 1.5s ease;
 }
 
-/* Accordion */
+
 .accordion-toggle {
   cursor: pointer;
   background-color: #f8e8d6;
@@ -176,7 +175,7 @@ body.dark {
   transition: all 0.3s;
 }
 
-/* Hover effect on chef photo */
+
 .chef-photo {
   width: 220px;
   border-radius: 12px;
@@ -201,7 +200,7 @@ body.dark {
 }
 .hero-small::after {
   content: "";
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background-color: rgba(0, 0, 0, 0.5); 
   position: absolute;
   width: 100%;
   height: 100%;
@@ -213,7 +212,7 @@ body.dark {
   z-index: 1;
   animation: fadeIn 1.5s ease;
 }
-/* About page styling */
+
 .about {
   padding: 40px 20px;
   max-width: 900px;
@@ -245,7 +244,7 @@ body.dark {
   transform: scale(1.05);
 }
 
-/* Accordion */
+
 .accordion-toggle {
   cursor: pointer;
   background-color: #f8e8d6;
@@ -354,11 +353,11 @@ body {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fff; /* Fallback light background */
-  color: #000; /* Text will be black by default */
+  background-color: #fff; 
+  color: #000; 
 }
 
-/* If using dark mode */
+
 body.dark-theme {
   background-color: #121212;
   color: #f0f0f0;
@@ -367,7 +366,7 @@ body.dark-theme {
 
 .about-intro,
 .staff-section {
-  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.9); 
   color: #000;
   padding: 20px;
   border-radius: 12px;
@@ -387,17 +386,17 @@ body.about-page {
 
 .about-intro,
 .staff-section {
-  background-color: rgba(255, 255, 255, 0.85); /* transparent white box */
+  background-color: rgba(255, 255, 255, 0.85); 
   padding: 25px;
   border-radius: 12px;
   max-width: 900px;
   margin: 30px auto;
   color: #000;
 }
-/* DARK THEME: Black and Gold */
+
 body.dark-theme {
   background-color: #000000;
-  color: #ffd700; /* gold text */
+  color: #ffd700;
 }
 
 .dark-theme header,
@@ -437,10 +436,10 @@ body.dark-theme {
   color: #ffd700;
   border: 1px solid #ffd700;
 }
-/* Global Styles */
+
 body {
-  background-color: #1a1a1a; /* deep charcoal black */
-  color: #ffd700; /* gold text */
+  background-color: #1a1a1a; 
+  color: #ffd700; 
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
@@ -554,12 +553,12 @@ body.gallery-page {
 
 .gallery-grid img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6); /* gold glow */
+  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6); 
 }
 .gallery-grid img {
   width: 100%;
-  height: 200px; /* fixed height */
-  object-fit: cover; /* crop and center */
+  height: 200px;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }

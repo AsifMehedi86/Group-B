@@ -31,14 +31,16 @@
       <a id="whatsappOrder" class="cta-button" href="#">💬 Text Your Order on WhatsApp</a>
     </div>
   </main>
+
+
   <script>
-    // Load basket from localStorage
+  
     const items = JSON.parse(localStorage.getItem("basket")) || [];
     const list = document.getElementById("checkoutItems");
     const totalEl = document.getElementById("checkoutTotal");
     let total = 0;
 
-    // Display items & calculate total
+    
     items.forEach(item => {
       const li = document.createElement("li");
       li.textContent = `${item.name} - £${item.price.toFixed(2)}`;
@@ -48,7 +50,7 @@
 
     totalEl.textContent = total.toFixed(2);
 
-    // WhatsApp Order Button
+    
     document.getElementById("whatsappOrder").addEventListener("click", () => {
       if (items.length === 0) {
         alert("Your basket is empty!");
@@ -56,23 +58,23 @@
       }
 
       const orderDetails = items.map(i => `${i.name} - £${i.price.toFixed(2)}`).join("%0A");
-      const whatsappNumber = "447523435912"; // UK number without + sign
+      const whatsappNumber = "447523435912"; 
       const message = `Hello, I would like to order:%0A${orderDetails}%0A%0ATotal: £${total.toFixed(2)}`;
 
-      // Open WhatsApp
+     
       window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
 
-      // Clear basket after sending
       localStorage.removeItem("basket");
 
-      // Optional: refresh page after 1 second
       setTimeout(() => {
         location.reload();
       }, 1000);
     });
+
   </script>
 
   <script src="js/script.js"></script>
+ 
 </body>
 </html>
 
